@@ -1,0 +1,7 @@
+com.haoyoung.ashare.admin.api.feign.RemoteClientDetailsService
+com.haoyoung.ashare.admin.api.feign.RemoteDictService
+com.haoyoung.ashare.admin.api.feign.RemoteDeptService
+com.haoyoung.ashare.admin.api.feign.RemoteLogService
+com.haoyoung.ashare.admin.api.feign.RemoteTokenService
+com.haoyoung.ashare.admin.api.feign.RemoteUserService
+com.haoyoung.ashare.admin.api.feign.RemoteParamService

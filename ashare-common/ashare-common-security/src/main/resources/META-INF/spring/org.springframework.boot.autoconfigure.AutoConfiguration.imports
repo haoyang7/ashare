@@ -1,0 +1,7 @@
+com.haoyoung.ashare.common.security.service.AshareUserDetailsServiceImpl
+com.haoyoung.ashare.common.security.service.AshareAppUserDetailsServiceImpl
+com.haoyoung.ashare.common.security.service.AshareRedisOAuth2AuthorizationService
+com.haoyoung.ashare.common.security.service.AshareRedisOAuth2AuthorizationConsentService
+com.haoyoung.ashare.common.security.component.AshareSecurityInnerAspect
+com.haoyoung.ashare.common.security.component.AshareSecurityMessageSourceConfiguration
+com.haoyoung.ashare.common.security.service.AshareRemoteRegisteredClientRepository

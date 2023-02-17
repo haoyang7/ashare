@@ -1,0 +1,3 @@
+com.haoyoung.ashare.common.feign.AshareFeignAutoConfiguration
+com.haoyoung.ashare.common.feign.sentinel.SentinelAutoConfiguration
+com.haoyoung.ashare.common.feign.sentinel.handle.GlobalBizExceptionHandler

@@ -1,0 +1,90 @@
+version: '3'
+services:
+  ashare-mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: ashare-mysql
+    image: ashare-mysql
+
+  ashare-redis:
+    image: redis:7.0.0
+    restart: always
+    container_name: ashare-redis
+    hostname: ashare-redis
+
+  ashare-register:
+    build:
+      context: ./ashare-register
+    restart: always
+    ports:
+      - 8848:8848
+    container_name: ashare-register
+    hostname: ashare-register
+    image: ashare-register
+
+  ashare-gateway:
+    build:
+      context: ./ashare-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: ashare-gateway
+    hostname: ashare-gateway
+    image: ashare-gateway
+
+  ashare-auth:
+    build:
+      context: ./ashare-auth
+    restart: always
+    container_name: ashare-auth
+    hostname: ashare-auth
+    image: ashare-auth
+
+  ashare-upms:
+    build:
+      context: ./ashare-upms/ashare-upms-biz
+    restart: always
+    container_name: ashare-upms
+    hostname: ashare-upms
+    image: ashare-upms
+
+  ashare-monitor:
+    build:
+      context: ./ashare-visual/ashare-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: ashare-monitor
+    hostname: ashare-monitor
+    image: ashare-monitor
+
+  ashare-sentinel:
+    build:
+      context: ./ashare-visual/ashare-sentinel-dashboard
+    restart: always
+    image: ashare-sentinel
+    container_name: ashare-sentinel
+    ports:
+      - 5003:5003
+
+  ashare-codegen:
+    build:
+      context: ./ashare-visual/ashare-codegen
+    restart: always
+    container_name: ashare-codegen
+    hostname: ashare-codegen
+    image: ashare-codegen
+
+  ashare-job:
+    build:
+      context: ./ashare-visual/ashare-xxl-job-admin
+    restart: always
+    container_name: ashare-job
+    hostname: ashare-job
+    image: ashare-job
+    ports:
+      - 5004:5004

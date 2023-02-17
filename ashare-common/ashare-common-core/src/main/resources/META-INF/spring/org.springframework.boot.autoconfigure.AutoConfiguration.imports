@@ -1,0 +1,6 @@
+com.haoyoung.ashare.common.core.config.TaskExecutorConfiguration
+com.haoyoung.ashare.common.core.config.JacksonConfiguration
+com.haoyoung.ashare.common.core.config.RedisTemplateConfiguration
+com.haoyoung.ashare.common.core.config.RestTemplateConfiguration
+com.haoyoung.ashare.common.core.util.SpringContextHolder
+com.haoyoung.ashare.common.core.config.WebMvcConfiguration
